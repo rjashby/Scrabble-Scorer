@@ -10,5 +10,11 @@ namespace ScrabbleScorer.Models
     {
       return 0;
     }
+
+    public string[] GetArray(string input)
+    {
+      string[] array = new string[1] {input};
+      return array;
+    }
   }
 }
