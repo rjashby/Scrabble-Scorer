@@ -32,5 +32,14 @@ namespace ScrabbleScorer.Tests
       // Are the arrays equal?
       CollectionAssert.AreEqual(test, against);
     }
+
+    [TestMethod]
+
+    public void CheckScore_ConvertLettersToScore_Score()
+    {
+      Calculate score1 = new Calculate();
+      string word = "birthday";
+      Assert.AreEqual(17, score1.CheckScore(word));
+    }
   }
 }
