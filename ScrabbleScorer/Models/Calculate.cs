@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 
 namespace ScrabbleScorer.Models
 {
@@ -9,7 +10,6 @@ namespace ScrabbleScorer.Models
     public int FindScore(string input)
     {
       int score = 0;
-      string input = "birthday";
       char[] letterArray = input.ToUpper().ToArray();
       foreach(char letter in letterArray)
       {
@@ -47,7 +47,7 @@ namespace ScrabbleScorer.Models
 
     public string[] GetArray(string input)
     {
-      string[] array = new string[1] {input};
+      string[] array = new string[1] { input };
       return array;
     }
 

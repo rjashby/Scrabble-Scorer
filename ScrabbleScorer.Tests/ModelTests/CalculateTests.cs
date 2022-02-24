@@ -24,12 +24,7 @@ namespace ScrabbleScorer.Tests
       Calculate score = new Calculate();
       string input = "four";
       string[] test = score.GetArray(input);
-      string[] against = new string[1] {input};
-
-      Console.WriteLine("test: "+test[0]);
-      Console.WriteLine("against: "+against[0]);
-
-      // Both of these tests pass now if you uncomment them
+      string[] against = new string[1] { input };
 
       // Are the types the same?
       Assert.IsInstanceOfType(score.GetArray(input), typeof(string[]));
