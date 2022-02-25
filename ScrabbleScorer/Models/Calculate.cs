@@ -63,5 +63,17 @@ namespace ScrabbleScorer.Models
       int TotalPoints = OnePointSquares + TwoPointSquares + ThreePointSquares + FourPointSquares + FivePointSquares + EightPointSquares + TenPointSquares;
       return TotalPoints;
     }
+
+    public static int CheckScore2(string input)
+    {
+      string[] RegExpressionList = { "!", "[aieoulnrst]", "[dg]", "[bcmp]", "[fhvwy]", "[k]", "!", "!", "[jx]", "!", "[qz]"};
+      int rollingTotal = 0, i = 0;
+      foreach(string element in RegExpressionList)
+      {
+        rollingTotal += Regex.Matches(input, element, RegexOptions.IgnoreCase).Count * i; 
+        i++;
+      }
+      return rollingTotal;
+    }
   }
 }
